@@ -4,8 +4,24 @@
   "type": "module",
   "main": "server.js",
   "dependencies": {
-    "dotenv": "^16.0.0",
-    "express": "^4.18.2",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
     "node-fetch": "^3.3.2"
-  }
+  },
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brusanganw-cmd/study-planner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brusanganw-cmd/study-planner/issues"
+  },
+  "homepage": "https://github.com/brusanganw-cmd/study-planner#readme"
 }
