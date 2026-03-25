@@ -15,3 +15,13 @@ pre {
   padding: 15px;
   white-space: pre-wrap;
 }
+
+.card {
+  background: white;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 10px;
+  width: 60%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}

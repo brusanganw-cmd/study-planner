@@ -8,9 +8,13 @@ form.addEventListener("submit", async (e) => {
   const days = document.getElementById("days").value;
   const level = document.getElementById("level").value;
 
-  output.textContent = "Generating...";
+  output.innerHTML = "Generating your study plan...";
 
   try {
+    if (!subject || days <= 0) {
+      output.innerHTML = "Please enter valid inputs.";
+      return;
+    }
     const res = await fetch("/generate-plan", {
       method: "POST",
       headers: {
@@ -20,8 +24,15 @@ form.addEventListener("submit", async (e) => {
     });
 
     const data = await res.json();
-    output.textContent = data.plan;
+
+    // Split into days
+    const lines = data.plan.split("\n").filter(line => line.trim() !== "");
+
+    output.innerHTML = lines.map(line => `
+      <div class="card">${line}</div>
+    `).join("");
+
   } catch (err) {
-    output.textContent = "Error generating plan.";
+    output.innerHTML = "Error generating plan.";
   }
 });
