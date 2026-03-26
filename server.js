@@ -11,6 +11,10 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.static("public"));
 
+app.get("/", (req, res) => {
+  res.send("OK");
+});
+
 app.post("/generate-plan", async (req, res) => {
   const { subject, days, level } = req.body;
 
@@ -53,6 +57,6 @@ app.post("/generate-plan", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log("Server running");
 });
