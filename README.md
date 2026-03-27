@@ -76,10 +76,13 @@ npx nodemon server.js
 ```bash
 ssh ubuntu@your-server-ip
 
-Server01: ssh ubuntu@3.82.218.15       http://3.82.218.15:3000
-Server02: ssh ubuntu@18.212.199.231   http://18.212.199.231:3000
-LoadBalancer01: ssh ubuntu@54.209.33.57    http://54.209.33.57
+Server01: ssh ubuntu@3.82.218.15       http://3.82.218.15:3000 #This is how you access the app using the first server.
 
+Server02: ssh ubuntu@18.212.199.231   http://18.212.199.231:3000 #This is how you access the app using the second server.
+
+LoadBalancer01: ssh ubuntu@54.209.33.57    http://54.209.33.57 #This is how you access the app using the Load Balancer.
+
+# Even if one server goes down, the load balancer can still route traffic to the other.
 ```
 
 #### 2. Update System and Install Node.js
