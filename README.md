@@ -75,7 +75,11 @@ npx nodemon server.js
 #### 1. Connect to Your Server
 ```bash
 ssh ubuntu@your-server-ip
-# Replace with your actual server IP (e.g., 54.209.33.57 or 18.212.199.231)
+
+Server01: ssh ubuntu@3.82.218.15       http://3.82.218.15:3000
+Server02: ssh ubuntu@18.212.199.231   http://18.212.199.231:3000
+LoadBalancer01: ssh ubuntu@54.209.33.57    http://54.209.33.57
+
 ```
 
 #### 2. Update System and Install Node.js
